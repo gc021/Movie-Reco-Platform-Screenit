@@ -1,0 +1,66 @@
+{
+  "entities": {
+    "AnalyticsMetrics": {
+      "title": "Analytics Metrics",
+      "description": "Global telemetry counters for visits, sessions, and quests",
+      "type": "object",
+      "properties": {
+        "totalPageVisits": { "type": "number", "description": "Total count of page loads" },
+        "uniqueSessions": { "type": "number", "description": "Total unique sessions" },
+        "questsStarted": { "type": "number", "description": "Total quests started" },
+        "questsCompleted": { "type": "number", "description": "Total quests completed" },
+        "totalLeads": { "type": "number", "description": "Total leads submitted" },
+        "lastVisitAt": { "type": "number", "description": "Timestamp of last visit" },
+        "lastActivityAt": { "type": "number", "description": "Timestamp of last activity" },
+        "lastLeadAt": { "type": "number", "description": "Timestamp of last lead" }
+      }
+    },
+    "UserLead": {
+      "title": "User Lead",
+      "description": "Captured user lead contact details and quiz preferences",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier for lead" },
+        "name": { "type": "string", "description": "Name of user" },
+        "phone": { "type": "string", "description": "Phone number with country code" },
+        "countryCode": { "type": "string", "description": "Country code like +91" },
+        "wizard": { "type": "string", "description": "Chosen Oracle/Wizard archetype" },
+        "mission": { "type": "string", "description": "Selected mood or quest mission" },
+        "party": { "type": "string", "description": "Viewing party configuration" },
+        "weapon": { "type": "string", "description": "Selected cinematic weapon/preference" },
+        "genres": { "type": "array", "description": "Array of chosen genres" },
+        "recommendedMovies": { "type": "array", "description": "Titles of 3 recommended films" },
+        "chosenMovie": { "type": "string", "description": "Final champion movie chosen" },
+        "submittedAt": { "type": "number", "description": "Client timestamp when lead submitted" },
+        "createdAt": { "type": "number", "description": "Server/storage timestamp" }
+      },
+      "required": ["name", "phone", "countryCode"]
+    },
+    "TelemetryEvent": {
+      "title": "Telemetry Event",
+      "description": "Individual visitor interaction telemetry event",
+      "type": "object",
+      "properties": {
+        "eventName": { "type": "string", "description": "Name of event e.g. page_visit" },
+        "timestamp": { "type": "number", "description": "Timestamp of event" },
+        "properties": { "type": "object", "description": "Custom properties of event" },
+        "createdAt": { "type": "number", "description": "Server timestamp" }
+      },
+      "required": ["eventName", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/analytics_metrics/{metricId}": {
+      "schema": "AnalyticsMetrics",
+      "description": "Global aggregated metrics counters"
+    },
+    "/leads/{leadId}": {
+      "schema": "UserLead",
+      "description": "Collection of captured leads across all devices"
+    },
+    "/events/{eventId}": {
+      "schema": "TelemetryEvent",
+      "description": "Visitor telemetry events"
+    }
+  }
+}

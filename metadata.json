@@ -1,0 +1,6 @@
+{
+  "name": "Screenit",
+  "description": "An adventure-themed movie recommendation experience finding your perfect Hollywood film through a seven-question cinematic quest.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

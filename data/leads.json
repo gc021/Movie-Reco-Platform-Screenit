@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Kavita Iyer (Mobile Safari)",
+    "phone": "+919812345678",
+    "countryCode": "+91",
+    "wizard": "nolan",
+    "mission": "Solve a mystery",
+    "party": "Date night",
+    "weapon": "Clever twists",
+    "genres": [
+      "Mystery",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "recommendedMovies": [
+      "Memento (2000)",
+      "The Prestige (2006)",
+      "Shutter Island (2010)"
+    ],
+    "submittedAt": 1788636201964,
+    "id": "lead_1788636202063_mqm7b",
+    "receivedAt": 1788636202063
+  },
+  {
+    "name": "Simulated External Device Visitor",
+    "phone": "+919876543210",
+    "countryCode": "+91",
+    "wizard": "gaurav",
+    "mission": "Feel every feeling",
+    "party": "Date night",
+    "weapon": "Deep feelings",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "recommendedMovies": [
+      "La La Land (2016)",
+      "Before Sunrise (1995)",
+      "Her (2013)"
+    ],
+    "submittedAt": 1788636153101,
+    "id": "lead_1788636153202_cpqbw",
+    "receivedAt": 1788636153202
+  },
+  {
+    "name": "Public Test User",
+    "phone": "+919988776655",
+    "countryCode": "+91",
+    "wizard": "gaurav",
+    "mission": "Get your pulse racing",
+    "party": "Friends",
+    "weapon": "Clever twists",
+    "genres": [
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "recommendedMovies": [
+      "Inception (2010)",
+      "Interstellar (2014)"
+    ],
+    "submittedAt": 1788094172395,
+    "id": "lead_1788094172397_pcd6y",
+    "receivedAt": 1788094172397
+  }
+]
